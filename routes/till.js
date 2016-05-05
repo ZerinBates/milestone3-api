@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var entries = [{slug:"what did I learn today",body:"that I am awesome"},{slug:"da da da",body:"dobedobedobe"}]
-
+router.get('/til/',function(req,res,next)){
+  res.render('index',{title:'Today I Learned'});
+});
 /* the create database router*/
 router.get('/add', function(req, res, next) {
   res.render('til/add', { title: 'build data here', entries:entries});
