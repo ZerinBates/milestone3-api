@@ -9,7 +9,7 @@ router.get('/til',function(req, res, next){
   res.render('todayILearned',{title:'Today I Learned',entries:entries});
 });
 router.get('/til/add', function(req, res, next) {
-  res.render('/add', { title: 'build data here', entries:entries});
+  res.render('add', { title: 'build data here', entries:entries});
 });
 /*when you hit submit*/
 router.get('/create', function(req, res, next) {
