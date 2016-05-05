@@ -19,7 +19,7 @@ router.get('/create', function(req, res, next) {
   res.render('todayILearned', { title: 'Today I Learned', entries:entries});
 });
 /*when you hit submit*/
-router.get('/create', function(req, res, next) {
+router.get('/til/create', function(req, res, next) {
   console.log(req.query);
   entries.push(req.query);
   console.log(entries);
