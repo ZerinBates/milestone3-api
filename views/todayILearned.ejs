@@ -2,8 +2,7 @@
 <%for (var i = 0;i<entries.length;i++)
 {%>
 <a href='/<%=i%>'><%=entries[i].slug%></a>
-<form action = "/delete/<%=id%>" method = 'POST'>
-<input type = "delete">
+<a href='/delete/<%=i%>'><input type = "delete"></a>
 <br>
 
 <%}%>
