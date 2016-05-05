@@ -5,7 +5,7 @@ router.get('/',function(req,res,next)){
   res.render('index',{title:'Today I Learned'});
 });
 /* the create database router*/
-router.get('/add', function(req, res, next) {
+router.get('til//add', function(req, res, next) {
   res.render('til/add', { title: 'build data here', entries:entries});
 });
 /*when you hit submit*/
