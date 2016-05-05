@@ -1,17 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var entries = [{slug:"what did I learn today",body:"that I am awesome"},{slug:"da da da",body:"dobedobedobe"}]
-/* READ all: GET entries listing. */
-router.get('/', function(req, res, next) {
- req.db.driver.execQuery(
- "SELECT * FROM entries",
- function (err, data) {
- if(err){console.log(err);}
- console.log(data);
- res.render('todayILearned', { title: 'Today I Learned', entries: data });
- }
-)
-});
+
 /* the create database router*/
 router.get('/add', function(req, res, next) {
   res.render('til/add', { title: 'build data here', entries:entries});
