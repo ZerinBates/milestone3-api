@@ -18,9 +18,9 @@ router.get('/create', function(req, res, next) {
   console.log(entries);
   res.render('todayILearned', { title: 'Today I Learned', entries:entries});
 });
-router.get('/delete', function(req, res, next) {
+router.get('/delete/:id', function(req, res, next) {
   console.log(req.query);
-  entries.remove(req.query);
+  entries.remove(req.params.id);
   console.log(entries);
   res.render('todayILearned', { title: 'Today I Learned', entries:entries});
 });
