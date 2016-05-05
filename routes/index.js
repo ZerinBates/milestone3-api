@@ -28,6 +28,5 @@ router.get('/til/create', function(req, res, next) {
 router.get('/:id', function(req, res, next) {
   
   res.render('entry', { title: 'build data here', entry:entries[req.param.id]});
-}
 };)
 module.exports = router;
