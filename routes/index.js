@@ -5,7 +5,7 @@ var entries = [{slug:"what did I learn today",body:"that I am awesome"},{slug:"d
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Today I Learned' });
 });
-router.get('/till',function(req, res, next){
+router.get('/til',function(req, res, next){
   res.render('todayILearned',{title:'Today I Learned',entries:entries});
 });
 router.get('/add', function(req, res, next) {
