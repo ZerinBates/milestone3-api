@@ -26,6 +26,12 @@ router.get('/til/create', function(req, res, next) {
   console.log(entries);
   res.render('todayILearned', { title: 'Today I Learned', entries:entries});
 });
+router.get('/delete/:id', function(req, res, next) {
+  console.log(req.query);
+  entries.[req.params.id]=0;
+  console.log(entries);
+  res.render('todayILearned', { title: 'Today I Learned', entries:entries});
+});
 router.get('/:id',function(req,res,next){
   res.render('entry',{title:'Today I Learned',entry:entries[req.params.id]});
 });
