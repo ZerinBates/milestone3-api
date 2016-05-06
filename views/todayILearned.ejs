@@ -1,9 +1,10 @@
 <%include head%>
 <%for (var i = 0;i<entries.length;i++)
 {%>
+<%if(entries[i]!=null){%>
 <a href='/<%=i%>'><%=entries[i].slug%></a>
-<a href='/delete/<%=i%>'><input type = "delete"></a>
+<a href='/delete/<%=i%>'>"delete"</a>
 <br>
-
+<%}%>
 <%}%>
 <%include foot%>
